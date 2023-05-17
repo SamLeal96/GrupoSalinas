@@ -21,6 +21,8 @@ class MainActivityViewModel: ViewModel() {
         viewModelScope.launch {
             val result = responseRepository()
 
+            Log.d("resultado", result.toString())
+
             if (result != null){
                 response.value = result
                 resultFlow.value = true
